@@ -1,0 +1,135 @@
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  position: relative;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table th {
+  background-color: #f0f2f5;
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: sticky;
+  top: 0;
+}
+
+.table th:hover {
+  background-color: #e5e8ed;
+}
+
+.table th.sorted {
+  background-color: #e5e8ed;
+}
+
+.sortIcon {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+.table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eee;
+  color: #555;
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tr.even {
+  background-color: #fff;
+}
+
+.table tr.odd {
+  background-color: #f9fafc;
+}
+
+.table tr:hover td {
+  background-color: #f0f4ff;
+}
+
+.noResults {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.tableFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+
+.resultCount {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pageButton {
+  background: linear-gradient(90deg, #4776e6 0%, #8e54e9 100%);
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pageButton:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(71, 118, 230, 0.3);
+}
+
+.pageButton:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.pageInfo {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .table {
+    font-size: 0.8rem;
+  }
+
+  .table th,
+  .table td {
+    padding: 0.6rem;
+  }
+
+  .tableFooter {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .pagination {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

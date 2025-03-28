@@ -1,0 +1,132 @@
+.editorContainer {
+  flex: 1;
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.editorContainer h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.editorHeader {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+.editorTip {
+  font-size: 0.8rem;
+  color: #888;
+  font-style: italic;
+}
+
+.editor {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  min-height: 200px;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.editor.focused {
+  border-color: #4776e6;
+  box-shadow: 0 0 0 3px rgba(71, 118, 230, 0.1);
+}
+
+.textarea {
+  width: 100%;
+  height: 100%;
+  min-height: 180px;
+  border: none;
+  background-color: transparent;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  color: #333;
+  position: relative;
+  z-index: 2;
+  white-space: pre;
+  overflow: auto;
+  background: transparent;
+}
+
+.highlightLayer {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  bottom: 0.5rem;
+  pointer-events: none;
+  font-family: "Courier New", monospace;
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre;
+  overflow: hidden;
+  color: transparent;
+  z-index: 1;
+}
+
+.keyword {
+  color: #0066cc;
+  font-weight: bold;
+}
+
+.function {
+  color: #cc6600;
+}
+
+.string {
+  color: #008800;
+}
+
+.number {
+  color: #aa0000;
+}
+
+.column {
+  color: #8e44ad;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.executeButton {
+  background: linear-gradient(90deg, #4776e6 0%, #8e54e9 100%);
+  border: none;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(71, 118, 230, 0.2);
+}
+
+.executeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(71, 118, 230, 0.3);
+}
+
+.executeButton:active {
+  transform: translateY(0);
+}
+
+.executeButton.executing {
+  background: linear-gradient(90deg, #ccc 0%, #999 100%);
+  cursor: not-allowed;
+}
+

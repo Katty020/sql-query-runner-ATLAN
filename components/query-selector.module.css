@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.queryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.queryItem {
+  padding: 0.8rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: #f5f7fa;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  color: #555;
+  border-left: 3px solid transparent;
+}
+
+.queryItem:hover {
+  background-color: #eef1f5;
+  transform: translateX(3px);
+}
+
+.queryItem.active {
+  background-color: #eef1f5;
+  color: #4776e6;
+  border-left: 3px solid #4776e6;
+  font-weight: 600;
+}
+
+.queryItem:last-child {
+  margin-bottom: 0;
+}
+
