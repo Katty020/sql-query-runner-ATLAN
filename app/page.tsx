@@ -34,12 +34,12 @@ export default function Home() {
       query: "SELECT * FROM products WHERE unitPrice > 50",
       filter: (product: Product) => Number.parseFloat(product.unitPrice) > 50,
     },
-    {
-      id: 4,
-      name: "Products on Order",
-      query: "SELECT * FROM products WHERE unitsOnOrder > 0",
-      filter: (product: Product) => Number.parseInt(product.unitsOnOrder) > 0,
-    },
+    // {
+    //   id: 4,
+    //   name: "Products on Order",
+    //   query: "SELECT * FROM products WHERE unitsOnOrder > 0",
+    //   filter: (product: Product) => Number.parseInt(product.unitsOnOrder) > 0,
+    // },
     {
       id: 5,
       name: "Discontinued Products",
